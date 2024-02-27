@@ -19,15 +19,27 @@ jobs:
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
-      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
-      - uses: actions/checkout@v3
-
-      # Runs a single command using the runners shell
-      - name: Run a one-line script
-        run: echo Hello, world!
-
-      # Runs a set of commands using the runners shell
-      - name: Run a multi-line script
-        run: |
-          echo Add other actions to build,
-          echo test, and deploy your project.
+      - name: Checkout
+        uses: actions/checkout@v3
+      - name: Force Xcode 14
+        run: sudo xcode-select -switch /Applications/Xcode_14.3.1.app
+      - name: iOS build setup
+        run: >-
+          xcodebuild test -workspace saucedemo-ui-automation.xcodeproj/project.xcworkspace
+          -scheme testautomation -destination 'platform=iOS Simulator,name=iPhone 15 Pro Max'
+      - name: testing ... iPhone 15 Pro Max
+        run: >-
+          xcodebuild test -workspace saucedemo-ui-automation.xcodeproj/project.xcworkspace
+          -scheme testautomation -destination 'platform=iOS Simulator,name=iPhone 15 Pro Max' -only-testing tests/UITest
+      - name: testing ... iPhone 15 Pro Plus
+        run: >-
+          xcodebuild test -workspace saucedemo-ui-automation.xcodeproj/project.xcworkspace
+          -scheme testautomation -destination 'platform=iOS Simulator,name=iPhone 15 Plus' -only-testing tests/UITest
+      - name: testing ... iPhone 15 Pro
+        run: >-
+          xcodebuild test -workspace saucedemo-ui-automation.xcodeproj/project.xcworkspace
+          -scheme testautomation -destination 'platform=iOS Simulator,name=iPhone 15 Pro' -only-testing tests/UITest
+      - name: testing ... iPhone 15
+        run: >-
+          xcodebuild test -workspace saucedemo-ui-automation.xcodeproj/project.xcworkspace
+          -scheme testautomation -destination 'platform=iOS Simulator,name=iPhone 15' -only-testing tests/UITest
