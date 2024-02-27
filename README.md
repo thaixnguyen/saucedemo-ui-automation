@@ -11,7 +11,7 @@ How to Run:
 ===
 There's two ways you can run this. You can either do this on the XCode UI, under the Test Navigator and running UITest under the tests directory or you can run this command on your terminal: 
 
-```xcodebuild test -scheme <name_of_scheme> -destination 'platform=iOS Simulator,name=<iPhone Device Name>' -only-testing tests/UITest```
+```xcodebuild test -scheme testautomation -destination 'platform=iOS Simulator,name=iPhone 15 Pro Max' -only-testing tests/UITest```
 
 Make sure you're in the root directory when running this command.
 
