@@ -1,5 +1,5 @@
 ## Sauce Demo UI Automation with XCUITest
-A testing framework that automates the different flows for https://www.saucedemo.com/ using a iOS Mobile with Safari.
+A testing framework that automates the different flows for https://www.saucedemo.com/ using a iOS Mobile device that is emulated with Safari.
 
 **Requirements:** 
 ===
