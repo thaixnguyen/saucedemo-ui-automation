@@ -30,3 +30,4 @@ Down the line, I want to look into implementing:
 3. Adding Allure for cleaner test reports.
 4. Adding CI via Github Actions.
 5. Integrate Screenplay into this rather than using Screens/POMs.
+Test
