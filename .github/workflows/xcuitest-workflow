@@ -2,6 +2,7 @@ name: iOS starter workflow
 
 on:
   push:
+    - main
 
 jobs:
   build:
