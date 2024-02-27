@@ -3,7 +3,7 @@ Automates the different flows for [Swag Labs](https://www.saucedemo.com/) using 
 
 **Requirements:** 
 ===
-You'll need [XCode 15](https://developer.apple.com/xcode/) and all the dependencies that come with XCode to run this. 
+You'll need [XCode](https://developer.apple.com/xcode/) and all the dependencies that come with XCode to run this. 
 
 You can also install this on your terminal via ```xcode-select --install``` if you want to run this on the terminal.
 
