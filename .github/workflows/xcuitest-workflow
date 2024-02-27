@@ -2,7 +2,7 @@ name: iOS starter workflow
 
 on:
   schedule:
-    - cron:  '* * * * 1-5'
+    - cron:  '44 4 * * *'
 
 jobs:
   build:
