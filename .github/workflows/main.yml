@@ -23,5 +23,4 @@ jobs:
         uses: actions/checkout@v3
       - name: iOS build setup
         run: >-
-          xcodebuild test -workspace saucedemo-ui-automation.xcodeproj/project.xcworkspace
-          -destination 'platform=iOS Simulator,OS=15.2,name=iPhone 14 Pro Max'
+          xcodebuild test -destination 'platform=iOS Simulator,OS=15.2,name=iPhone 14 Pro Max'
