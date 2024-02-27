@@ -22,7 +22,7 @@ Issues:
 Running the test using a tablet iOS device will not work, it has issues finding the URL.
 
 CI is failing due to GitHub running MacOS 13 with iOS simulators on 16.2, the default project runs on iOS 17.2 which is causing
-the scheme not to find the devices on run.
+the scheme not to find the devices to run.
 
 Improvements:
 ===
