@@ -1,6 +1,8 @@
 name: iOS starter workflow
 
-on: pull_request
+on:
+  schedule:
+    - cron:  '* * * * 1-5'
 
 jobs:
   build:
