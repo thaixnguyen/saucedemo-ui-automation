@@ -2,7 +2,7 @@
 //  BaseTest.swift
 //  tests
 //
-//  Created by Thai Nguyen on 2024-02-26..
+//  Created by Thai Nguyen on 2024-02-26.
 //
 
 import Foundation
