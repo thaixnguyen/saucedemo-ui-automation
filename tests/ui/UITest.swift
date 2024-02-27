@@ -17,36 +17,29 @@ final class UITest: BaseTest {
         // This tests logs in with standard user and completes the checkout flow.
 
         // Perform login with standard_user
-        let login = LoginScreen()
         login.logIntoApp(username: Credentials.standardUser, password: Credentials.password)
 
         // Click on Nav Side Bar, Reset the App State and Close the Nav Side Bar
-        let navSideBar = SideNavScreen()
         navSideBar.openSideNavBar()
         navSideBar.clickOnResetAppStateButton()
         navSideBar.clickOnCloseNavButton()
 
         // Adds the first item to the cart and go to cart to checkout
-        let homeScreen = HomeScreen()
         homeScreen.addToCart(numberOfItems: purchasedOneItem)
         homeScreen.clickOnCart(numberOfItems: String(purchasedOneItem))
 
         // Click on checkout to checkout
-        let checkOut = CheckoutScreen()
         checkOut.clickCheckout()
 
         // Goes through checkout flow, fills in first name, last name and zipcode and then continues to the final screen
-        let checkOutInfo = CheckoutInfoScreen()
         checkOutInfo.fillCheckout(firstName: CheckoutUser.firstName, lastName: CheckoutUser.lastName, zipCode: CheckoutUser.zipCode)
         assistUtils.hideKeyboard()
         checkOutInfo.clickContinue()
 
         // Clicks on finish to finish the check out flow
-        let checkOutOverview = CheckoutOverviewScreen()
         checkOutOverview.clickFinish()
 
         // Do an assertion to see if the checkout was successful.
-        let checkOutComplete = CheckoutCompleteScreen()
         XCTAssertTrue(checkOutComplete.checkOutSuccessful(), AssertionsMessages.checkOutNotComplete)
     }
 
@@ -56,17 +49,14 @@ final class UITest: BaseTest {
         // cart.
 
         // Perform login with standard_user
-        let login = LoginScreen()
         login.logIntoApp(username: Credentials.standardUser, password: Credentials.password)
 
         // Click on Nav Side Bar, Reset the App State and Close the Nav Side Bar
-        let navSideBar = SideNavScreen()
         navSideBar.openSideNavBar()
         navSideBar.clickOnResetAppStateButton()
         navSideBar.clickOnCloseNavButton()
 
         // Sort items from highest price to lowest price and adds them to the cart
-        let homeScreen = HomeScreen()
         homeScreen.sortFromHighestToLowest()
         homeScreen.addToCart(numberOfItems: purchasedThreeItems)
 
@@ -87,36 +77,29 @@ final class UITest: BaseTest {
         // This tests logs in with performance glitch user and completes the checkout flow.
 
         // Perform login with performance_glitch_user
-        let login = LoginScreen()
         login.logIntoApp(username: Credentials.performanceUser, password: Credentials.password)
 
         // Click on Nav Side Bar and then reset the App State and close the Nav Side Bar
-        let navSideBar = SideNavScreen()
         navSideBar.openSideNavBar()
         navSideBar.clickOnResetAppStateButton()
         navSideBar.clickOnCloseNavButton()
 
         // Adds the first item to the cart and go to cart to checkout
-        let homeScreen = HomeScreen()
         homeScreen.addToCart(numberOfItems: purchasedOneItem)
         homeScreen.clickOnCart(numberOfItems: String(purchasedOneItem))
 
         // Click on checkout to checkout
-        let checkOut = CheckoutScreen()
         checkOut.clickCheckout()
 
         // Goes through checkout flow, fills in first name, last name and zipcode and then continues to the final screen
-        let checkOutInfo = CheckoutInfoScreen()
         checkOutInfo.fillCheckout(firstName: CheckoutUser.firstName, lastName: CheckoutUser.lastName, zipCode: CheckoutUser.zipCode)
         assistUtils.hideKeyboard()
         checkOutInfo.clickContinue()
 
         // Clicks on finish to finish the check out flow
-        let checkOutOverview = CheckoutOverviewScreen()
         checkOutOverview.clickFinish()
 
         // Do an assertion to see if the checkout was successful.
-        let checkOutComplete = CheckoutCompleteScreen()
         XCTAssertTrue(checkOutComplete.checkOutSuccessful(), AssertionsMessages.checkOutNotComplete)
     }
 
@@ -126,7 +109,6 @@ final class UITest: BaseTest {
         // user has been locked out of their account. So we do a check that this is true.
 
         // Perform login with locked_out_user
-        let login = LoginScreen()
         login.logIntoApp(username: Credentials.lockedUser, password: Credentials.password)
 
         // Since this test is expected to "fail", we want to do a check if the user is locked out or not,
@@ -143,26 +125,21 @@ final class UITest: BaseTest {
         // last name so this test "passes"
 
         // Perform login with problem_user
-        let login = LoginScreen()
         login.logIntoApp(username: Credentials.problemUser, password: Credentials.password)
 
         // Click on Nav Side Bar, Reset the App State and Close the Nav Side Bar
-        let navSideBar = SideNavScreen()
         navSideBar.openSideNavBar()
         navSideBar.clickOnResetAppStateButton()
         navSideBar.clickOnCloseNavButton()
 
         // Adds the first item to the cart and go to cart to checkout
-        let homeScreen = HomeScreen()
         homeScreen.addToCart(numberOfItems: purchasedOneItem)
         homeScreen.clickOnCart(numberOfItems: String(purchasedOneItem))
 
         // Click on checkout to checkout
-        let checkOut = CheckoutScreen()
         checkOut.clickCheckout()
 
         // Goes through checkout flow, fills in first name, last name and zipcode and attempts to go to the final screen
-        let checkOutInfo = CheckoutInfoScreen()
         checkOutInfo.fillCheckout(firstName: CheckoutUser.firstName, lastName: CheckoutUser.lastName, zipCode: CheckoutUser.zipCode)
         assistUtils.hideKeyboard()
         checkOutInfo.clickContinue()

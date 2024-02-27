@@ -15,6 +15,15 @@ open class BaseTest: XCTestCase {
     private var baseScreen = BaseScreen()
     private var assistUtils = Utils()
     lazy var app = baseScreen.app
+    
+    // Initialize all the screens for UI Test
+    let login = LoginScreen()
+    let navSideBar = SideNavScreen()
+    let homeScreen = HomeScreen()
+    let checkOut = CheckoutScreen()
+    let checkOutInfo = CheckoutInfoScreen()
+    let checkOutOverview = CheckoutOverviewScreen()
+    let checkOutComplete = CheckoutCompleteScreen()
 
     open override func setUpWithError() throws {
         continueAfterFailure = false
