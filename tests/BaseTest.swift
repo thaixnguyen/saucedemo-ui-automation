@@ -21,7 +21,7 @@ open class BaseTest: XCTestCase {
         app.launch()
         URLField.tap()
 
-        // On clean startup, checks for the Keyboard tutorial and bypasses it if it shows up..
+        // On clean startup, checks for the Keyboard tutorial and bypasses it if it shows up.
         assistUtils.dismissKeyboardTutorialIfNeeded()
 
         app.typeText(URL.sauceDemoURL)
