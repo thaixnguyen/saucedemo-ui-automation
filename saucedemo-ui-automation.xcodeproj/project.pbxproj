@@ -276,7 +276,6 @@
 			);
 			mainGroup = 4BE4686D2B884BC000661898;
 			packageReferences = (
-				4BA71EAD2B8BBD8F00790E8A /* XCRemoteSwiftPackageReference "CodableJSON" */,
 			);
 			productRefGroup = 4BE468792B884BE300661898 /* Products */;
 			projectDirPath = "";
@@ -856,17 +855,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCRemoteSwiftPackageReference section */
-		4BA71EAD2B8BBD8F00790E8A /* XCRemoteSwiftPackageReference "CodableJSON" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/guykogus/CodableJSON";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 3.0.1;
-			};
-		};
-/* End XCRemoteSwiftPackageReference section */
 	};
 	rootObject = 4BE4686E2B884BC000661898 /* Project object */;
 }
