@@ -21,6 +21,9 @@ Issues:
 ===
 Running the test using a tablet iOS device will not work, it has issues finding the URL.
 
+CI is failing due to GitHub running MacOS 13 with iOS simulators on 16.2, the default project runs on iOS 17.2 which is causing
+the scheme not to find the devices on run.
+
 Improvements:
 ===
 Down the line, I want to look into implementing:
@@ -28,5 +31,4 @@ Down the line, I want to look into implementing:
 1. Cleaning up some of the code, I can definitely improve some of the encapsulation for the screens.
 2. Adding the rest of the elements on all the pages.
 3. Adding Allure for cleaner test reports.
-4. Adding CI via Github Actions.
-5. Integrate Screenplay into this rather than using Screens/POMs.
+4. Integrate Screenplay into this rather than using Screens/POMs.
