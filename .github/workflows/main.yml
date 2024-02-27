@@ -4,7 +4,6 @@ name: CI
 
 # Controls when the workflow will run
 on:
-  # Triggers the workflow on push or pull request events but only for the "main" branch
   push:
 
   # Allows you to run this workflow manually from the Actions tab
@@ -23,4 +22,5 @@ jobs:
         uses: actions/checkout@v3
       - name: iOS build setup
         run: >-
+          xcrun xctrace list devices
           xcodebuild test -scheme testautomation -destination 'platform=iOS Simulator,name=iPhone 14 Pro Max'
