@@ -1,5 +1,5 @@
 ## Sauce Demo UI Automation with XCUITest
-A testing framework that automates the login purchase flow for https://www.saucedemo.com/ using iOS with Safari.
+A testing framework that automates the different flows for https://www.saucedemo.com/ using iOS with Safari.
 
 **Requirements:** 
 ===
