@@ -23,4 +23,3 @@ jobs:
       - name: iOS build setup
         run: >-
           xcrun xctrace list devices
-          xcodebuild test -scheme testautomation -destination 'platform=iOS Simulator,name=iPhone 14 Pro Max'
