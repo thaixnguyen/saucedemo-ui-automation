@@ -24,7 +24,7 @@ jobs:
       - name: iOS build setup
         run: >-
           xcodebuild test -workspace saucedemo-ui-automation.xcodeproj/project.xcworkspace
-          -scheme testautomation -destination 'platform=iOS Simulator,name=iPhone 14 Pro Max'
+          -scheme testautomation -destination 'platform=iOS Simulator,OS=15.2,name=iPhone 14 Pro Max'
       - name: testing ... iPhone 15 Pro Max
         run: >-
           xcodebuild test -workspace saucedemo-ui-automation.xcodeproj/project.xcworkspace
