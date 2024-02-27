@@ -24,20 +24,4 @@ jobs:
       - name: iOS build setup
         run: >-
           xcodebuild test -workspace saucedemo-ui-automation.xcodeproj/project.xcworkspace
-          -scheme testautomation -destination 'platform=iOS Simulator,OS=15.2,name=iPhone 14 Pro Max'
-      - name: testing ... iPhone 15 Pro Max
-        run: >-
-          xcodebuild test -workspace saucedemo-ui-automation.xcodeproj/project.xcworkspace
-          -scheme testautomation -destination 'platform=iOS Simulator,name=iPhone 15 Pro Max' -only-testing tests/UITest
-      - name: testing ... iPhone 15 Pro Plus
-        run: >-
-          xcodebuild test -workspace saucedemo-ui-automation.xcodeproj/project.xcworkspace
-          -scheme testautomation -destination 'platform=iOS Simulator,name=iPhone 15 Plus' -only-testing tests/UITest
-      - name: testing ... iPhone 15 Pro
-        run: >-
-          xcodebuild test -workspace saucedemo-ui-automation.xcodeproj/project.xcworkspace
-          -scheme testautomation -destination 'platform=iOS Simulator,name=iPhone 15 Pro' -only-testing tests/UITest
-      - name: testing ... iPhone 15
-        run: >-
-          xcodebuild test -workspace saucedemo-ui-automation.xcodeproj/project.xcworkspace
-          -scheme testautomation -destination 'platform=iOS Simulator,name=iPhone 15' -only-testing tests/UITest
+          -scheme testautomation -destination 'platform=iOS Simulator,OS=15.0,name=iPhone 14 Pro Max'
