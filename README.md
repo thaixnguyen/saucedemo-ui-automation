@@ -1,5 +1,5 @@
 ## Sauce Demo UI Automation with XCUITest
-Automates the different flows for [Swag Labs](https://www.saucedemo.com/) using a iOS Mobile device that is emulated with Safari.
+Automates the different flows for [Swag Labs](https://www.saucedemo.com/) using a iOS Mobile device with Safari.
 
 **Requirements:** 
 ===
