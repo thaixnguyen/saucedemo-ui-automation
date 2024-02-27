@@ -1,5 +1,5 @@
 ## Sauce Demo UI Automation with XCUITest
-A testing framework that automates the different flows for https://www.saucedemo.com/ using iOS with Safari.
+A testing framework that automates the different flows for https://www.saucedemo.com/ using a iOS Mobile with Safari.
 
 **Requirements:** 
 ===
@@ -16,6 +16,10 @@ There's two ways you can run this:
 ```xcodebuild test -scheme testautomation -destination 'platform=iOS Simulator,name=iPhone 15 Pro Max' -only-testing tests/UITest```
 
 Make sure you're in the root directory when running this command.
+
+Issues:
+===
+Running the test using a tablet iOS device will not work, it has issues finding the URL.
 
 Improvements:
 ===
