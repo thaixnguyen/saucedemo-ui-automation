@@ -387,14 +387,12 @@
 		4BE468722B884BC000661898 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
 			};
 			name = Debug;
 		};
 		4BE468732B884BC000661898 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
 			};
 			name = Release;
 		};

@@ -1,6 +1,4 @@
-# This is a basic workflow to help you get started with Actions
-
-name: Automated UI Tests
+name: iOS Automated UI Tests
 
 # Controls when the workflow will run
 on:
@@ -29,5 +27,3 @@ jobs:
       - name: testing iPhone 14
         run: >-
           xcodebuild test -scheme testautomation -destination 'platform=iOS Simulator,OS=16.2,name=iPhone 14' -only-testing tests/UITest
-
-
