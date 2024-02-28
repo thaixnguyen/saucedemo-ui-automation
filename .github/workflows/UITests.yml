@@ -6,7 +6,7 @@ on:
 
 jobs:
 
-  iphone_14_pro_max:
+  test_iphone_14_pro_max:
     runs-on: macos-latest
     steps:
       - name: Checkout
@@ -15,7 +15,7 @@ jobs:
         run: >-
           xcodebuild test -scheme testautomation -destination 'platform=iOS Simulator,OS=16.2,name=iPhone 14 Pro Max' -only-testing tests/UITest
 
-  iphone_14_pro:
+  test_iphone_14_pro:
     runs-on: macos-latest
     steps:
       - name: Checkout
@@ -24,7 +24,7 @@ jobs:
         run: >-
           xcodebuild test -scheme testautomation -destination 'platform=iOS Simulator,OS=16.2,name=iPhone 14 Pro' -only-testing tests/UITest
 
-  iphone_14:
+  test_iphone_14:
     runs-on: macos-latest
     steps:
       - name: Checkout
