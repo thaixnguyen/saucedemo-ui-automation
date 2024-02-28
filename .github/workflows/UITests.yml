@@ -1,26 +1,37 @@
-# This is a basic workflow to help you get started with Actions
+name: iOS Automated UI Tests
 
-name: Automated UI Tests
-
-# Controls when the workflow will run
 on:
   pull_request:
-
-  # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
 
-# A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
-  # This workflow contains a single job called "build"
-  build:
-    # The type of runner that the job will run on
-    runs-on: macos-latest
 
-    # Steps represent a sequence of tasks that will be executed as part of the job
+  test_iphone_14_pro_max:
+    runs-on: macos-latest
+    timeout-minutes: 8
     steps:
       - name: Checkout
         uses: actions/checkout@v3
-      - name: iOS build setup
+      - name: testing iPhone 14 Pro Max
         run: >-
-          xcodebuild test -scheme testautomation -destination 'platform=iOS Simulator,OS=16.2,name=iPhone 13 Pro Max' -only-testing tests/UITest
+          xcodebuild test -scheme testautomation -destination 'platform=iOS Simulator,OS=16.2,name=iPhone 14 Pro Max' -only-testing tests/UITest
 
+  test_iphone_14_pro:
+    runs-on: macos-latest
+    timeout-minutes: 8
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+      - name: testing iPhone 14 Pro
+        run: >-
+          xcodebuild test -scheme testautomation -destination 'platform=iOS Simulator,OS=16.2,name=iPhone 14 Pro' -only-testing tests/UITest
+
+  test_iphone_14:
+    runs-on: macos-latest
+    timeout-minutes: 8
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+      - name: testing iPhone 14
+        run: >-
+          xcodebuild test -scheme testautomation -destination 'platform=iOS Simulator,OS=16.2,name=iPhone 14' -only-testing tests/UITest
