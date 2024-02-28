@@ -8,6 +8,7 @@ jobs:
 
   test_iphone_14_pro_max:
     runs-on: macos-latest
+    timeout-minutes: 8
     steps:
       - name: Checkout
         uses: actions/checkout@v3
@@ -17,6 +18,7 @@ jobs:
 
   test_iphone_14_pro:
     runs-on: macos-latest
+    timeout-minutes: 8
     steps:
       - name: Checkout
         uses: actions/checkout@v3
@@ -26,6 +28,7 @@ jobs:
 
   test_iphone_14:
     runs-on: macos-latest
+    timeout-minutes: 8
     steps:
       - name: Checkout
         uses: actions/checkout@v3
