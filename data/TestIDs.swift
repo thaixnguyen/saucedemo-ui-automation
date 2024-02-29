@@ -18,7 +18,7 @@ enum TestIDs {
     static let aboutID = "About"
     static let logOutID = "Logout"
     static let resetAppStateID = "Reset App State"
-    static let closeNavBar = "Close Menu"
+    static let closeNavBarID = "Close Menu"
     static let alphabeticalSortID = "Name (A to Z)"
     static let reverseAlphabeticSortID = "Name (Z to A)"
     static let priceLowestToHighestID = "Price (low to high)"

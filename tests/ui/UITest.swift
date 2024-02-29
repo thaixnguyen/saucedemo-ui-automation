@@ -11,36 +11,35 @@ import XCTest
 final class UITest: BaseTest {
     private var purchasedOneItem = 1
     private var purchasedThreeItems = 3
-    private var assistUtils = Utils()
 
     func testLoginPurchaseFlowStandardUser() throws {
         // This tests logs in with standard user and completes the checkout flow.
 
         // Perform login with standard_user
-        login.logIntoApp(username: Credentials.standardUser, password: Credentials.password)
+        loginScreen.logIntoApp(username: Credentials.standardUser, password: Credentials.password)
 
         // Click on Nav Side Bar, Reset the App State and Close the Nav Side Bar
-        navSideBar.openSideNavBar()
-        navSideBar.clickOnResetAppStateButton()
-        navSideBar.clickOnCloseNavButton()
+        navSideBarScreen.openSideNavBar()
+        navSideBarScreen.clickOnResetAppStateButton()
+        navSideBarScreen.clickOnCloseNavButton()
 
         // Adds the first item to the cart and go to cart to checkout
         homeScreen.addToCart(numberOfItems: purchasedOneItem)
         homeScreen.clickOnCart(numberOfItems: String(purchasedOneItem))
 
         // Click on checkout to checkout
-        checkOut.clickCheckout()
+        checkOutScreen.clickCheckout()
 
         // Goes through checkout flow, fills in first name, last name and zipcode and then continues to the final screen
-        checkOutInfo.fillCheckout(firstName: CheckoutUser.firstName, lastName: CheckoutUser.lastName, zipCode: CheckoutUser.zipCode)
+        checkOutInfoScreen.fillCheckout(firstName: CheckoutUser.firstName, lastName: CheckoutUser.lastName, zipCode: CheckoutUser.zipCode)
         assistUtils.hideKeyboard()
-        checkOutInfo.clickContinue()
+        checkOutInfoScreen.clickContinue()
 
         // Clicks on finish to finish the check out flow
-        checkOutOverview.clickFinish()
+        checkOutOverviewScreen.clickFinish()
 
         // Do an assertion to see if the checkout was successful.
-        XCTAssertTrue(checkOutComplete.checkOutSuccessful(), AssertionsMessages.checkOutNotComplete)
+        XCTAssertTrue(checkOutCompleteScreen.checkOutSuccessful(), AssertionsMessages.checkOutNotComplete)
     }
 
     func testLoginPurchaseThreeMostExpensiveItemsStandardUser() throws {
@@ -49,12 +48,12 @@ final class UITest: BaseTest {
         // cart.
 
         // Perform login with standard_user
-        login.logIntoApp(username: Credentials.standardUser, password: Credentials.password)
+        loginScreen.logIntoApp(username: Credentials.standardUser, password: Credentials.password)
 
         // Click on Nav Side Bar, Reset the App State and Close the Nav Side Bar
-        navSideBar.openSideNavBar()
-        navSideBar.clickOnResetAppStateButton()
-        navSideBar.clickOnCloseNavButton()
+        navSideBarScreen.openSideNavBar()
+        navSideBarScreen.clickOnResetAppStateButton()
+        navSideBarScreen.clickOnCloseNavButton()
 
         // Sort items from highest price to lowest price and adds them to the cart
         homeScreen.sortFromHighestToLowest()
@@ -67,7 +66,7 @@ final class UITest: BaseTest {
         try setUpWithError()
 
         // Log in
-        login.logIntoApp(username: Credentials.standardUser, password: Credentials.password)
+        loginScreen.logIntoApp(username: Credentials.standardUser, password: Credentials.password)
 
         // Assertion to check if the items are still in the cart.
         XCTAssertTrue(homeScreen.checkNumberOfItemsInCart(numberOfItems: String(purchasedThreeItems)), AssertionsMessages.itemsNotInCart)
@@ -77,30 +76,30 @@ final class UITest: BaseTest {
         // This tests logs in with performance glitch user and completes the checkout flow.
 
         // Perform login with performance_glitch_user
-        login.logIntoApp(username: Credentials.performanceUser, password: Credentials.password)
+        loginScreen.logIntoApp(username: Credentials.performanceUser, password: Credentials.password)
 
         // Click on Nav Side Bar and then reset the App State and close the Nav Side Bar
-        navSideBar.openSideNavBar()
-        navSideBar.clickOnResetAppStateButton()
-        navSideBar.clickOnCloseNavButton()
+        navSideBarScreen.openSideNavBar()
+        navSideBarScreen.clickOnResetAppStateButton()
+        navSideBarScreen.clickOnCloseNavButton()
 
         // Adds the first item to the cart and go to cart to checkout
         homeScreen.addToCart(numberOfItems: purchasedOneItem)
         homeScreen.clickOnCart(numberOfItems: String(purchasedOneItem))
 
         // Click on checkout to checkout
-        checkOut.clickCheckout()
+        checkOutScreen.clickCheckout()
 
         // Goes through checkout flow, fills in first name, last name and zipcode and then continues to the final screen
-        checkOutInfo.fillCheckout(firstName: CheckoutUser.firstName, lastName: CheckoutUser.lastName, zipCode: CheckoutUser.zipCode)
+        checkOutInfoScreen.fillCheckout(firstName: CheckoutUser.firstName, lastName: CheckoutUser.lastName, zipCode: CheckoutUser.zipCode)
         assistUtils.hideKeyboard()
-        checkOutInfo.clickContinue()
+        checkOutInfoScreen.clickContinue()
 
         // Clicks on finish to finish the check out flow
-        checkOutOverview.clickFinish()
+        checkOutOverviewScreen.clickFinish()
 
         // Do an assertion to see if the checkout was successful.
-        XCTAssertTrue(checkOutComplete.checkOutSuccessful(), AssertionsMessages.checkOutNotComplete)
+        XCTAssertTrue(checkOutCompleteScreen.checkOutSuccessful(), AssertionsMessages.checkOutNotComplete)
     }
 
     func testLoginLockedUser() throws {
@@ -109,11 +108,11 @@ final class UITest: BaseTest {
         // user has been locked out of their account. So we do a check that this is true.
 
         // Perform login with locked_out_user
-        login.logIntoApp(username: Credentials.lockedUser, password: Credentials.password)
+        loginScreen.logIntoApp(username: Credentials.lockedUser, password: Credentials.password)
 
         // Since this test is expected to "fail", we want to do a check if the user is locked out or not,
         // so we do an assertion this user has been locked out or not.
-        XCTAssertTrue(login.checkLockedUser(), AssertionsMessages.notLockedUser)
+        XCTAssertTrue(loginScreen.checkLockedUser(), AssertionsMessages.notLockedUser)
     }
 
     func testLoginPurchaseFlowProblemUser() throws {
@@ -125,26 +124,26 @@ final class UITest: BaseTest {
         // last name so this test "passes"
 
         // Perform login with problem_user
-        login.logIntoApp(username: Credentials.problemUser, password: Credentials.password)
+        loginScreen.logIntoApp(username: Credentials.problemUser, password: Credentials.password)
 
         // Click on Nav Side Bar, Reset the App State and Close the Nav Side Bar
-        navSideBar.openSideNavBar()
-        navSideBar.clickOnResetAppStateButton()
-        navSideBar.clickOnCloseNavButton()
+        navSideBarScreen.openSideNavBar()
+        navSideBarScreen.clickOnResetAppStateButton()
+        navSideBarScreen.clickOnCloseNavButton()
 
         // Adds the first item to the cart and go to cart to checkout
         homeScreen.addToCart(numberOfItems: purchasedOneItem)
         homeScreen.clickOnCart(numberOfItems: String(purchasedOneItem))
 
         // Click on checkout to checkout
-        checkOut.clickCheckout()
+        checkOutScreen.clickCheckout()
 
         // Goes through checkout flow, fills in first name, last name and zipcode and attempts to go to the final screen
-        checkOutInfo.fillCheckout(firstName: CheckoutUser.firstName, lastName: CheckoutUser.lastName, zipCode: CheckoutUser.zipCode)
+        checkOutInfoScreen.fillCheckout(firstName: CheckoutUser.firstName, lastName: CheckoutUser.lastName, zipCode: CheckoutUser.zipCode)
         assistUtils.hideKeyboard()
-        checkOutInfo.clickContinue()
+        checkOutInfoScreen.clickContinue()
 
         // As expected, we can't get to the final screen so we do an assertion to see that last name was not filled in properly
-        XCTAssertTrue(checkOutInfo.validateLastNameErrorMessage(), AssertionsMessages.notProblemUser)
+        XCTAssertTrue(checkOutInfoScreen.validateLastNameErrorMessage(), AssertionsMessages.notProblemUser)
     }
 }

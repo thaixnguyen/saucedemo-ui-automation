@@ -14,7 +14,7 @@ class SideNavScreen: BaseScreen {
     private lazy var aboutButton = app.staticTexts[TestIDs.aboutID]
     private lazy var logOutButton = app.staticTexts[TestIDs.logOutID]
     private lazy var resetAppStateButton = app.staticTexts[TestIDs.resetAppStateID]
-    private lazy var closeButton = app.buttons[TestIDs.closeNavBar]
+    private lazy var closeButton = app.buttons[TestIDs.closeNavBarID]
 
     func openSideNavBar() {
         openSideNav.tap()

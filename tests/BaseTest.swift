@@ -13,17 +13,17 @@ open class BaseTest: XCTestCase {
     private lazy var goButtonKeyboard = app.buttons[TestIDs.goID]
 
     private var baseScreen = BaseScreen()
-    private var assistUtils = Utils()
     lazy var app = baseScreen.app
-    
-    // Initialize all the screens for UI Test
-    let login = LoginScreen()
-    let navSideBar = SideNavScreen()
+
+    // Initialize all the screens and helpers for test setup
+    let loginScreen = LoginScreen()
+    let navSideBarScreen = SideNavScreen()
     let homeScreen = HomeScreen()
-    let checkOut = CheckoutScreen()
-    let checkOutInfo = CheckoutInfoScreen()
-    let checkOutOverview = CheckoutOverviewScreen()
-    let checkOutComplete = CheckoutCompleteScreen()
+    let checkOutScreen = CheckoutScreen()
+    let checkOutInfoScreen = CheckoutInfoScreen()
+    let checkOutOverviewScreen = CheckoutOverviewScreen()
+    let checkOutCompleteScreen = CheckoutCompleteScreen()
+    let assistUtils = Utils()
 
     open override func setUpWithError() throws {
         continueAfterFailure = false
