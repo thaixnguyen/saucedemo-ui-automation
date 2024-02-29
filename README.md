@@ -9,11 +9,10 @@ You can also install this on your terminal via ```xcode-select --install``` if y
 
 How to Run:
 ===
-There's two ways you can run this:
+There's three ways you can run this:
 1. You can either do this on the XCode UI, under the Test Navigator and running UITest under the `./tests/ui` directory.
-2. You can run this command on your terminal: 
-
-```xcodebuild test -scheme testautomation -destination 'platform=iOS Simulator,name=iPhone 15 Pro Max' -only-testing tests/UITest```
+2. You can run this command on your terminal: ```xcodebuild test -scheme testautomation -destination 'platform=iOS Simulator,name=iPhone 15 Pro Max' -only-testing tests/UITest```
+3. Run the CI on this repo (Only currently set up for iPhone 14 devices)
 
 Make sure you're in the root directory when running this command.
 
