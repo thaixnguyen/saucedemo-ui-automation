@@ -103,7 +103,7 @@ final class UITest: BaseTest {
     }
 
     func testLoginLockedUser() throws {
-        // This test is expected to fail because the user we're logging in with locked.
+        // This test is expected to fail because the user we're logging in with a locked account.
         // Assuming we have this assumption, to make this test "pass", we are expecting that the error that the
         // user has been locked out of their account. So we do a check that this is true.
 
