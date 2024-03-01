@@ -24,7 +24,8 @@ Improvements:
 ===
 Down the line, I want to look into implementing:
 
-1. Cleaning up some of the code, I can definitely improve some of the encapsulation for the screens.
-2. Adding the rest of the elements on all the pages.
-3. Adding Allure for cleaner test reports.
-4. Integrate Screenplay into this rather than using Screens/POMs.
+1. Look at a way to containizer the tests using Docker with a MacOS image via Docker.
+2. Cleaning up some of the code, I can definitely improve some of the encapsulation for the screens.
+3. Adding the rest of the elements on all the pages.
+4. Adding Allure for cleaner test reports.
+5. Integrate Screenplay into this rather than using Screens/POMs.
